@@ -343,7 +343,7 @@ export function PrivacyNoticeView({ back, settings, about }: PrivacyNoticeViewPr
               </span>
             </div>
             <span className="text-[11px] font-mono text-[#7e92b8] bg-white/[0.03] border border-white/[0.07] px-3 py-1 rounded-full">
-              Last Updated: September 2026 • v1.7.1
+              Last Updated: September 2026 • V2
             </span>
           </div>
 

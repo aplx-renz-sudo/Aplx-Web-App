@@ -63,7 +63,7 @@ export function InstallModal({ isOpen, onClose }: InstallModalProps) {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {/* 1. Install Aplx CLI */}
             <a
-              href="https://github.com/Korentic/Aplx"
+              href="https://github.com/R3nz/Aplx"
               target="_blank"
               rel="noopener noreferrer"
               id="install-aplx-cli-btn"
@@ -104,7 +104,7 @@ export function InstallModal({ isOpen, onClose }: InstallModalProps) {
                     1. Install Aplx CLI
                   </div>
                   <div style={{ fontSize: '12px', color: '#8ea8ff', fontFamily: 'var(--font-mono)' }}>
-                    https://github.com/Korentic/Aplx
+                    https://github.com/R3nz/Aplx
                   </div>
                 </div>
               </div>

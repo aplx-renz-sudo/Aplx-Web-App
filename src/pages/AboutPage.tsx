@@ -206,7 +206,7 @@ export function AboutPage({ launch, home, settings, motion }: AboutPageProps) {
           <p>Try Aplx Web, explore the project, or build your own setup.</p>
           <div className="hero-actions">
             <button className="primary" onClick={launch}>Launch Aplx Web <ArrowUp size={16} /></button>
-            <a className="secondary" href="https://github.com/Korentic/Aplx" target="_blank" rel="noreferrer">
+            <a className="secondary" href="https://github.com/R3nz/Aplx" target="_blank" rel="noreferrer">
               View on GitHub <ChevronRight size={16} />
             </a>
           </div>
@@ -231,7 +231,7 @@ export function AboutPage({ launch, home, settings, motion }: AboutPageProps) {
             textTransform: 'uppercase',
           }}
         >
-          WEBSITE FOR APLX :- CURRENT VERSION, V1.7.1
+          WEBSITE FOR APLX :- CURRENT VERSION, V2
         </div>
       </footer>
     </main>

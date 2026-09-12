@@ -7,6 +7,7 @@ import {
   ChevronLeft,
   ChevronDown,
   Copy,
+  Megaphone,
   Menu,
   MessageSquarePlus,
   MoreHorizontal,
@@ -44,7 +45,6 @@ import {
   User,
   UserCheck,
   ExternalLink,
-  AlertTriangle,
   Hammer,
   Scale,
   FileText,
@@ -1585,47 +1585,36 @@ function Landing({
           Aplx is a universal AI dock and intuitive guide for anyone who wants to run their own API keys easily. No middleman servers — your credentials stay 100% safe in your browser.
         </p>
 
-        {/* Under Development Glowing Yellow Area */}
-        <div
-          className="under-dev-banner"
-          style={{
-            margin: '22px 0 18px 0',
-            padding: '12px 18px',
-            borderRadius: '14px',
-            background: 'rgba(245, 158, 11, 0.13)',
-            border: '1.5px solid rgba(251, 191, 36, 0.9)',
-            boxShadow: '0 0 24px rgba(251, 191, 36, 0.4), 0 0 48px rgba(245, 158, 11, 0.22), inset 0 0 12px rgba(251, 191, 36, 0.15)',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '12px',
-            maxWidth: '580px',
-            width: '100%',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-          }}
-        >
-          <AlertTriangle
-            size={20}
-            className="under-dev-icon"
-            style={{
-              color: '#fde047',
-              filter: 'drop-shadow(0 0 8px rgba(250, 204, 21, 0.85))',
-              flexShrink: 0,
-            }}
-          />
-          <span
-            className="under-dev-text"
-            style={{
-              fontSize: '12px',
-              fontWeight: 700,
-              letterSpacing: '0.02em',
-              color: '#fef08a',
-              lineHeight: 1.45,
-              textShadow: '0 0 12px rgba(250, 204, 21, 0.65)',
-            }}
-          >
-            FIX 1.7.1 :- SETTINGS HAS BEEN FIXED! A few more bugs to be fixed for mobile, and its good to go.
-          </span>
+        {/* V2 Announcement Board */}
+        <div className="announce-board" role="status" aria-label="V2 announcements">
+          <div className="announce-board-header">
+            <Megaphone size={14} />
+            <span>Announcement Board</span>
+            <span className="announce-board-dots">•••</span>
+          </div>
+          <ul className="announce-board-list">
+            <li className="announce-board-item">
+              <CheckCircle2 size={14} className="announce-board-check" />
+              <span className="announce-board-text">
+                <span className="announce-board-tag">NEW</span>
+                BRAND NEW <b>V2</b>, PC EXCLUSIVE, WORKS ON EVERY OS!
+              </span>
+            </li>
+            <li className="announce-board-item">
+              <CheckCircle2 size={14} className="announce-board-check" />
+              <span className="announce-board-text">
+                <span className="announce-board-tag">NEW</span>
+                FEATURES ADDED THAT WERE PREVIOUSLY LIMITED!
+              </span>
+            </li>
+            <li className="announce-board-item">
+              <CheckCircle2 size={14} className="announce-board-check" />
+              <span className="announce-board-text">
+                <span className="announce-board-tag">NEW</span>
+                RUN LOCALLY USING .bat OR .sh OR .command ACCORDING TO YOUR OS :D
+              </span>
+            </li>
+          </ul>
         </div>
 
         <div className="hero-actions">
@@ -1670,8 +1659,8 @@ function Landing({
         </div>
       </div>
       <footer>
-        APLX WEB <span>•</span> A project by KORENTIC <span>•</span>
-        <a href="https://github.com/Korentic/Aplx" target="_blank" rel="noreferrer">
+        APLX WEB <span>•</span> A project by R3NZ <span>•</span>
+        <a href="https://github.com/R3nz/Aplx" target="_blank" rel="noreferrer">
           GITHUB · INSTALL APLX ↗
         </a>
       </footer>
@@ -2067,7 +2056,7 @@ function FullSettingsModal({
       title: 'Security & Platform',
       items: [
         { id: 'privacy' as const, label: 'Data & Privacy Hub', icon: ShieldCheck, badge: '100% Client', color: 'text-emerald-400' },
-        { id: 'about' as const, label: 'About & Ecosystem', icon: Orbit, badge: 'v1.7', color: 'text-blue-400' },
+        { id: 'about' as const, label: 'About & Ecosystem', icon: Orbit, badge: 'V2', color: 'text-blue-400' },
       ],
     },
   ];
@@ -2223,11 +2212,11 @@ function FullSettingsModal({
                 <div className="about-grid">
                   <div>
                     <small>VERSION</small>
-                    <b>V1.7.1 Edition</b>
+                    <b>V2 Edition</b>
                   </div>
                   <div>
                     <small>BUILT BY</small>
-                    <b>Korentic</b>
+                    <b>R3nz</b>
                   </div>
                   <div>
                     <small>MODE</small>
@@ -2254,7 +2243,7 @@ function FullSettingsModal({
                   <p>
                     R3nz (developer) , Github copilot, Claude Sonnet and Haiku and Opus models, CodeX (GPT-5.6), Kimi K3, GPT-4, minimax-m3, Grok, Le chat Mistral, Gemini, and many more AIs!
                   </p>
-                  <a href="https://github.com/Korentic/Aplx" target="_blank" rel="noreferrer" className="about-github-btn playful-pop">
+                  <a href="https://github.com/R3nz/Aplx" target="_blank" rel="noreferrer" className="about-github-btn playful-pop">
                     <ExternalLink size={15} />
                     <span>Explore & install Aplx on GitHub</span>
                     <span className="text-xs text-[#8ea8ff]">↗</span>
@@ -2281,7 +2270,7 @@ function FullSettingsModal({
                     textTransform: 'uppercase',
                   }}
                 >
-                  WEBSITE FOR APLX :- CURRENT VERSION, V1.7.1
+                  WEBSITE FOR APLX :- CURRENT VERSION, V2
                 </div>
               </div>
             )}
