@@ -1,0 +1,6 @@
+{
+  "name": "Aplx Web",
+  "description": "Private-first AI assistant web application featuring direct provider routing, Token Saver (~22% conservation), interactive companion pets, animated thinking deliberation, and deep gradient/theme customization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

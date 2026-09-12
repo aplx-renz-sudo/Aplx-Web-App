@@ -1,0 +1,338 @@
+/* Apple-Inspired Refined Motion & Interactive Aesthetics */
+
+@keyframes subtle-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: subtle-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modal-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.animate-modal-pop {
+  animation: modal-scale 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes message-appear {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.message {
+  animation: message-appear 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Tactile Micro-Interactions */
+.playful-btn, .primary, .secondary, .nav-launch {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s ease,
+              background 0.15s ease,
+              border-color 0.15s ease !important;
+}
+
+.playful-btn:hover, .primary:hover, .secondary:hover, .nav-launch:hover {
+  transform: translateY(-1px) !important;
+}
+
+.playful-btn:active, .primary:active, .secondary:active, .nav-launch:active {
+  transform: scale(0.98) !important;
+}
+
+.icon:hover {
+  color: #ffffff !important;
+}
+
+.new-chat {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.new-chat:hover {
+  background: rgba(255, 255, 255, 0.09) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+.history {
+  transition: all 0.15s ease !important;
+}
+.history:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #ffffff !important;
+}
+
+.send {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.15s ease !important;
+}
+.send:hover:not(:disabled) {
+  transform: scale(1.04) !important;
+}
+.send:active:not(:disabled) {
+  transform: scale(0.96) !important;
+}
+
+/* ============================================================
+   Aplx Galaxy Logo — dotted "A" core in a living spiral galaxy
+   ============================================================ */
+.galaxy-logo {
+  position: relative;
+  perspective: 900px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.galaxy-scene {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Soft galactic halo + tilted spiral disc haze */
+.galaxy-halo,
+.galaxy-disc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotateX(68deg);
+  pointer-events: none;
+}
+.galaxy-halo {
+  width: 92%;
+  height: 92%;
+  background: radial-gradient(circle,
+    rgba(94, 140, 255, 0.16) 0%,
+    rgba(150, 100, 255, 0.10) 34%,
+    rgba(20, 24, 48, 0.0) 68%);
+  filter: blur(2px);
+}
+.galaxy-disc {
+  width: 84%;
+  height: 84%;
+  background:
+    conic-gradient(from 0deg,
+      rgba(143, 184, 255, 0.10), rgba(177, 140, 255, 0.16),
+      rgba(99, 226, 255, 0.10), rgba(177, 140, 255, 0.16),
+      rgba(143, 184, 255, 0.10));
+  filter: blur(6px);
+  animation: galaxy-disc-spin 26s linear infinite;
+  opacity: 0.8;
+}
+@keyframes galaxy-disc-spin {
+  to { transform: translate(-50%, -50%) rotateX(68deg) rotate(360deg); }
+}
+
+/* Orbit rings */
+.galaxy-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  border: 1px dashed rgba(160, 190, 255, 0.22);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.galaxy-ring-one {
+  width: 88%;
+  height: 88%;
+  transform: translate(-50%, -50%) rotateX(66deg) rotateZ(-6deg);
+  border-color: rgba(143, 184, 255, 0.30);
+}
+.galaxy-ring-two {
+  width: 64%;
+  height: 64%;
+  transform: translate(-50%, -50%) rotateX(64deg) rotateZ(10deg);
+  border-color: rgba(177, 140, 255, 0.30);
+  border-style: dotted;
+}
+
+/* Star field dots */
+.galaxy-star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* The two signature orbiting comets */
+.galaxy-comet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+  z-index: 3;
+}
+.galaxy-comet-one {
+  background: #63e2ff;
+  box-shadow: 0 0 12px 3px rgba(99, 226, 255, 0.8), 0 0 30px 8px rgba(99, 226, 255, 0.3);
+}
+.galaxy-comet-two {
+  width: 8px;
+  height: 8px;
+  background: #ffd9a0;
+  box-shadow: 0 0 10px 2px rgba(255, 217, 160, 0.8), 0 0 26px 7px rgba(255, 190, 120, 0.3);
+}
+
+/* Dotted "A" core — a 4x5 dot matrix */
+.galaxy-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 14px 12px;
+  border-radius: 18px;
+  background: radial-gradient(circle at 50% 40%, rgba(30, 42, 84, 0.9), rgba(10, 12, 26, 0.94));
+  border: 1px solid rgba(120, 150, 255, 0.25);
+  box-shadow:
+    0 0 24px rgba(80, 120, 255, 0.35),
+    0 0 60px rgba(120, 80, 255, 0.18),
+    inset 0 0 18px rgba(90, 130, 255, 0.12);
+  z-index: 4;
+}
+.galaxy-core-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(120, 145, 220, 0.14);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+.galaxy-core-dot.on {
+  background: #eaf2ff;
+  box-shadow: 0 0 8px 2px rgba(160, 200, 255, 0.9), 0 0 18px 4px rgba(100, 150, 255, 0.4);
+  animation: galaxy-core-pulse 2.6s ease-in-out infinite;
+}
+.galaxy-core-dot.on:nth-child(4n + 2) { animation-delay: 0.35s; }
+.galaxy-core-dot.on:nth-child(4n + 3) { animation-delay: 0.7s; }
+.galaxy-core-dot.on:nth-child(4n + 4) { animation-delay: 1.05s; }
+@keyframes galaxy-core-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+/* Nav / footer mini variant */
+.galaxy-mini {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.galaxy-mini .galaxy-logo {
+  cursor: default;
+}
+.galaxy-mini .galaxy-core {
+  padding: 7px 6px;
+  gap: 3px;
+  border-radius: 10px;
+  border-width: 0.5px;
+}
+.galaxy-mini .galaxy-core-dot {
+  width: 5px;
+  height: 5px;
+}
+.galaxy-mini .galaxy-comet {
+  width: 5px;
+  height: 5px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .galaxy-disc { animation: none; }
+  .galaxy-core-dot.on { animation: none; }
+  .galaxy-scene { transition: none; }
+}
+
+/* Keep the mini galaxy from hijacking taps on mobile */
+.galaxy-mini * {
+  pointer-events: none;
+}
+
+/* ============================================================
+   Drag + explosion FX
+   ============================================================ */
+.galaxy-logo {
+  cursor: grab;
+}
+.galaxy-logo.dragging {
+  cursor: grabbing;
+  z-index: 30;
+}
+
+/* White core flash on explosion */
+.galaxy-flash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 34%;
+  height: 34%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(180, 210, 255, 0.5) 40%,
+    rgba(140, 160, 255, 0) 70%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+@keyframes galaxy-flash {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.2); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(2.4); }
+}
+
+/* Expanding ring shockwave */
+.galaxy-shockwave {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.15);
+  border: 2px solid rgba(160, 200, 255, 0.85);
+  box-shadow: 0 0 24px rgba(120, 170, 255, 0.5), inset 0 0 24px rgba(120, 170, 255, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+@keyframes galaxy-shockwave {
+  0% { opacity: 0.95; transform: translate(-50%, -50%) scale(0.15); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.9); }
+}
+
+/* While exploding: brighten the core and fuzz the rings */
+.galaxy-logo.exploding .galaxy-core {
+  box-shadow:
+    0 0 34px rgba(120, 160, 255, 0.7),
+    0 0 80px rgba(140, 100, 255, 0.4),
+    inset 0 0 24px rgba(120, 160, 255, 0.3);
+  transition: box-shadow 0.25s ease;
+}
+.galaxy-logo.exploding .galaxy-ring {
+  border-color: rgba(200, 220, 255, 0.5);
+}
