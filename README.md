@@ -9,10 +9,10 @@ ez use
 
 see yo start. type of files down here lmao
 
-mac- use the start.command
+mac- use the start.command (apple thingy)
 
-windows- use start.bat
+windows- use start.bat (big blue windows haha)
 
-linux- use start.sh
+linux- use start.sh (pengiun go brr)
 
 boom you have aplx
